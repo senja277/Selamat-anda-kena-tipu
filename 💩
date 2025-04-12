@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Aktivasi Dana</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    input[type=text], input[type=number] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .popup {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background-color: #ffdddd;
+      border: 1px solid red;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Form Aktivasi Dana</h2>
+    <p>Silakan isi data berikut untuk mencairkan dana:</p>
+    <input type="text" placeholder="Nama Lengkap" id="nama">
+    <input type="number" placeholder="Nominal Transfer" id="nominal">
+    <input type="text" placeholder="Bank Tujuan" id="bank">
+    <button onclick="kirimForm()">Kirim</button>
+
+    <div class="popup" id="popup">
+      <h3>SELAMAT!</h3>
+      <p>Anda telah tertipu oleh niat Anda sendiri. Cobalah bekerja jujur, Kakak.</p>
+    </div>
+  </div>
+
+  <script>
+    function kirimForm() {
+      document.getElementById('popup').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
